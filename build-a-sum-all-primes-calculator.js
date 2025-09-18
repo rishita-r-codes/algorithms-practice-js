@@ -10,7 +10,6 @@ function sumPrimes(num) {
     lowerNums.push(i);
   }
   let primes = lowerNums.filter(findPrime);
-  console.log(primes)
   let sum = primes.reduce((acc, current) => acc + current);
   return sum;
 }
@@ -23,6 +22,7 @@ function findPrime(number) {
   }
   return true;
 }
+
 
 console.log(sumPrimes(10));
 
