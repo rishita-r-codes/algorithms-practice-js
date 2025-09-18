@@ -13,7 +13,6 @@ function pairwise(arr, arg) {
     }
     if (index !== -1) {
       sumsArr.push(i + index);
-      //foundInd.push(i, index);
       arr[i] = "";
       arr[index] = "";
     }
