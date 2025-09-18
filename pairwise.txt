@@ -1,0 +1,28 @@
+** start of script.js **
+
+function pairwise(arr, arg) {
+  let sumsArr = [];
+  for (let i = 0; i<arr.length; i++) {
+    if (arr[i] == "") {
+      continue;
+    }
+    let complement = arg - arr[i];
+    let index = arr.findIndex((element) => complement === element)
+    if (i == index){
+      continue;
+    }
+    if (index !== -1) {
+      sumsArr.push(i + index);
+      //foundInd.push(i, index);
+      arr[i] = "";
+      arr[index] = "";
+    }
+  }
+  return sumsArr.reduce((acc, curr) => acc + curr, 0)
+}
+
+console.log(pairwise([1, 3, 2, 4], 4));
+
+
+** end of script.js **
+

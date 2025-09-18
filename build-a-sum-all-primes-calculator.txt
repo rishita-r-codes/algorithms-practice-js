@@ -1,0 +1,30 @@
+** start of script.js **
+
+function sumPrimes(num) {
+  if (num < 2) {
+    return 0;
+  }
+  let lowerNums = [];
+  for(let i = 2; i <= num; i++)
+  {
+    lowerNums.push(i);
+  }
+  let primes = lowerNums.filter(findPrime);
+  console.log(primes)
+  let sum = primes.reduce((acc, current) => acc + current);
+  return sum;
+}
+
+function findPrime(number) {
+  for (let j=2; j<=Math.sqrt(number); j++){
+    if (number % j === 0){
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(sumPrimes(10));
+
+** end of script.js **
+
